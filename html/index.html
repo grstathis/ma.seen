@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+
+        <title>Welcome to ma.seen</title>
+        <!--
+        <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+         or -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script> 
+        <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.js"></script>
+        <script>
+            // external JS: masonry.pkgd.js
+            var $grid = $('.grid').masonry({
+                itemSelector: '.grid-item',
+                columnWidth: 160
+            });
+
+            $grid.on( 'click', '.grid-item', function() {
+                // change size of item via class
+                $( this ).toggleClass('grid-item--gigante');
+                // trigger layout
+                $grid.masonry();
+            });
+        </script>
+
+        <link rel="stylesheet" type="text/css" href="../style/base.css"/>
+    </head>
+    <body>
+        <h1>Hello Masonry</h1>
+        <p>Click to toggle item size</p>
+        <div class="grid">
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--width2 grid-item--height2"></div>
+            <div class="grid-item grid-item--height3"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item grid-item--width3"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item grid-item--width2 grid-item--height3"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--width2 grid-item--height2"></div>
+            <div class="grid-item grid-item--width2"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height3"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height2"></div>
+        </div>
+    </body>
+</html>
