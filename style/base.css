@@ -40,6 +40,7 @@ body { font-family: sans-serif; }
 .grid-item--gigante {
     width: 320px;
     height: 360px;
+    background: #F2C;
 }
 
 .grid-item:hover {
